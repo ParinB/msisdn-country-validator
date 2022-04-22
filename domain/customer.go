@@ -8,7 +8,7 @@ type Customer struct {
 	State string `json:"state"`
 }
 
-
+//Validate  checks if the country code  and  numbers are valid
 func  (c *Customer) Validate()  {
 	for _, country := range Countries {
 		ValidCode := country.CountryCodeRegex.MatchString(c.Msisdn)
